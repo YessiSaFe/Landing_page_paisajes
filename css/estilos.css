@@ -1,7 +1,6 @@
 
 /* Estilos Generales */
 
-
 * {
     box-sizing: border-box;
     margin: 0; 
@@ -21,13 +20,13 @@ h1, h2, h3, h4, h5, h6 {
 .texto-naranja {
     font-weight: 300;
     color: orange;
-    text-shadow: 2px 3px rgb(19, 18, 18);
+    text-shadow: 2px 2px rgb(19, 18, 18);
 }
 
 .texto-blanco {
     font-weight: 700;
     color: #fff;
-    text-shadow: 2px 3px rgb(19, 18, 18);
+    text-shadow: 2px 2px rgb(19, 18, 18);
 }
 
 .texto-negro {
@@ -37,12 +36,17 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------------- */
     /* Estilos fullpage */
     /* ------------------------- */
+    /* Aqui se configura el color de los puntitos del menu deslizable: #fp-nav ul li a span y #fp-nav ul li .fp-tooltip  */
 #fp-nav ul li a span {
-    background: orange;
+    background: #01DF01;
 }
 
+/* Configuracion de propiedades del menu deslizable */
 #fp-nav ul li .fp-tooltip {
-    color: orange;
+    color: #01DF01;
+    font-size: 21px;
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
 }
 
 /* ------------------------- */
@@ -66,10 +70,10 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
-    font-size: 19px;
+    font-size: 21px;
     color: #FAFAFA;
     transition: .5s ease;
-    text-shadow: 2px 3px #999;
+    text-shadow: 2px 2px #999;
 }
 
 .nav li.active {
@@ -82,12 +86,18 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+.menu li.active a,
+.menu li:hover a {
+    color: orange;
+}
+
+
     /* ------------------------- */
     /* Header */
     /* ------------------------- */
 .header {
     background: url('../media/paisaje1.jpg');
-    background-position: center;
+    /* background-position: center; */
 }
 
 .header .contenedor_titulo {
@@ -118,4 +128,222 @@ h1, h2, h3, h4, h5, h6 {
     0% { transform: translateY(20px); }
     25% { transform: translateY(0); }
     100% { transform: translateY(20px); }
+}
+
+/* ------------------------- */
+    /* Contenido fotos */
+    /* ------------------------- */
+
+.fotos article {
+    
+    background-size: cover;
+}
+
+.fotos article:nth-child(1) {
+    background-image: url(../media/alpes.jpg);
+}
+
+.fotos article:nth-child(2) {
+    background-image: url(../media/playa.jpg);
+    background-position: center;
+}
+
+.fotos article:nth-child(3) {
+    background-image: url(../media/mountain.jpg);
+    background-position: center;
+}
+
+.fotos article:nth-child(4) {
+    background-image: url(../media/flower.jpg);
+    background-position: center;
+}
+
+.fotos article:nth-child(5) {
+    background-image: url(../media/iceland.jpg);
+    background-position: center;
+}
+
+.fotos article:nth-child(6) {
+    background-image: url(../media/road.jpg);
+    background-position: center;
+}
+
+.fotos article:nth-child(7) {
+    background-image: url(../media/mezzano.jpg);
+    background-position: center;
+}
+
+.fotos article:nth-child(8) {
+    background-image: url(../media/beach.jpg);
+    background-position: center;
+}
+
+.fotos article:nth-child(9) {
+    background-image: url(../media/winter.jpg);
+    background-position: center;
+}
+
+.fotos article:nth-child(10) {
+    background-image: url(../media/dolomites.jpg);
+    background-position: center;
+}
+
+/* ------------------------- */
+    /* Clases de fullpage.js - flechas slide */
+    /* ------------------------- */
+
+.fp-controlArrow.fp-next, 
+.fp-controlArrow.fp-prev {
+    top: 95%;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 80%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #FFFFFF transparent transparent; 
+}
+
+.fp-controlArrow.fp-next {
+    right: 60px;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #FFFFFF; 
+}
+
+    /* ------------------------- */
+    /* Footer o pie de pagina */
+    /* ------------------------- */
+
+.footer .texto-naranja {
+    text-transform: uppercase;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.footer h2 {
+    opacity: 0; 
+   font-family: 'Oswald', sans-serif;
+   transition: 1.2s ease all;
+}
+
+.footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 50px;
+}
+
+.footer .redes-sociales a {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    color: #30313A;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin: 0 20px;
+}
+
+.footer .facebook i { color: #3b5998;}
+.footer .twitter i { color: #1da1f2;}
+.footer .instagram i { color: #c13584;}
+
+.footer .facebook:hover  { background: #3b5998;}
+.footer .twitter:hover  { background: #1da1f2;}
+.footer .instagram:hover  { background: #c13584;}
+
+.footer .facebook:hover i { color: #fff;}
+.footer .twitter:hover i { color: #fff; }
+.footer .instagram:hover i { color: #fff; }
+
+    /* ------------------------- */
+    /* Media Queries */
+    /* ------------------------- */
+
+@media screen and (max-width: 768px) {
+    .menu li a,
+    .menu li.active a {
+        font-size: 18px;
+    }
+    .footer h2 {
+        font-size: 16px;
+    }
+    .footer .redes-sociales {
+        font-size: 30px;
+    }
+    .footer .redes-sociales a {
+        width: 70px;
+        height: 70px;
+    }
+    .footer .texto-naranja {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header .titulo {
+        font-size: 50px;
+    }
+    .fp-controlArrow.fp-next {
+        left: 100px;
+    }
+
+    .fp-controlArrow.fp-prev {
+        left: 25px;
+    }
+
+    #fp-nav ul li .fp-tooltip {
+        font-size: 14px;
+    }
+
+}
+
+/* Media Querie para un tamaño mas pequeño */
+
+@media screen and (max-width: 450px) {
+    .nav {
+        display: block;
+        text-align: center;
+    }
+    .nav a {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+/* Haciendo ajustes al menu */
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu li a,
+    .menu li.active a {
+        font-size: 15px;
+        padding: 5px;
+    }
+    .titulo {
+        font-size: 45px;
+    }
+    .titulo {
+        font-size: 45px;
+    }
+
+    #fp-nav ul li .fp-tooltip {
+        font-size: 16px;
+    }
+
+    .footer .texto-naranja {
+        font-size: 13px;
+    }
+
+    .footer .redes-sociales a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer .redes-sociales a i {
+        font-size: 24px;
+    }
 }
